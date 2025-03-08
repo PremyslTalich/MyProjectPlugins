@@ -1,0 +1,25 @@
+[versions]
+# For MyProjectPlugins
+build-app-id = "com.example.app"
+build-app-version = "1.0"
+build-namespace = "com.example.app"
+build-compileSdk = "35"
+build-minSdk = "34"
+build-java = "11"
+build-kotlin-compiler-extension = "1.5.15"
+
+agp = "8.7.2"
+kgp = "2.1.10"
+kotlin = "2.1.10"
+
+composeBom = "2025.02.00"
+
+[plugins]
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+[libraries]
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kgp" }
+compose-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" } # Needed for Compose runtine
